@@ -1,9 +1,172 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px; }
+
+@font-face {
+  font-family: 'Rakkas';
+  src: url(./../fonts/Rakkas-Regular.ttf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Comic';
+  src: url(./../fonts/HVD_Comic_Serif_Pro.otf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lalezar';
+  src: url(./../fonts/Lalezar-Regular.ttf);
+  font-weight: normal;
+  font-style: normal; }
+
+h1, h2, h3, h4, h5, h6 {
+  font: 12px/18px "Comic", Helvetica, sans-serif;
+  color: #5d676e; }
+
+h1 {
+  font-size: 70px; }
+
+h2 {
+  font-size: 35px;
+  padding-bottom: 15px;
+  line-height: 40px; }
+
+h3 {
+  font-size: 25px;
+  padding-bottom: 10px; }
+
+p, address, time {
+  font: 15px/25px "Lalezar", Helvetica, sans-serif;
+  color: #69747c;
+  text-align: justify; }
+
+body {
+  background: url(../img/clouds1.png);
+  background-repeat: repeat;
+  background-color: #8cbef8;
+  min-height: 100vh;
+  display: grid;
+  grid-gap: 0px 0px;
+  grid-template-areas: ". header ."  "main main main" ". footer .";
+  grid-template-rows: minmax(150px, 220px) auto 70px;
+  grid-template-columns: auto minmax(380px, 600px) auto;
+  justify-content: stretch;
+  justify-items: stretch; }
+
+.main-header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  background: orange;
+  text-align: center; }
+  .main-header .logo {
+    align-self: center;
+    display: inline-block;
+    text-align: center;
+    padding: 30px 0 30px 0;
+    user-select: none;
+    text-decoration: none;
+    color: white; }
+    .main-header .logo span {
+      font: 68px/70px "Comic", Helvetica, sans-serif;
+      display: inline-block;
+      margin: 0 19px;
+      min-width: 250px; }
+
+.main-content {
+  grid-area: main;
+  display: grid;
+  grid-gap: 5px 0px;
+  grid-template-areas: ". content .";
+  grid-template-rows: auto;
+  grid-template-columns: auto minmax(400px, 800px) auto; }
+  .main-content section {
+    padding: 0 0px 40px 0px; }
+  .main-content .main-content-wrapper {
+    border-radius: 5px;
+    grid-area: content;
+    background-color: pink;
+    padding: 40px 0 0 0; }
+    .main-content .main-content-wrapper .play-game-section {
+      display: flex;
+      justify-content: center; }
+      .main-content .main-content-wrapper .play-game-section .play-btn {
+        width: 170px;
+        vertical-align: middle;
+        height: 65px;
+        background: #456c8d;
+        border: 3px solid;
+        border-radius: 2px;
+        cursor: pointer;
+        border-color: white;
+        font: 300 38px/41px "Comic", Helvetica, sans-serif;
+        color: white; }
+        .main-content .main-content-wrapper .play-game-section .play-btn:hover {
+          background-color: #4d799e;
+          color: dareken(white, 5%);
+          border-color: dareken(white, 50%);
+          font-size: 40px;
+          border-width: 2px; }
+    .main-content .main-content-wrapper .about-author-section article {
+      padding: 0 5px 0 5px;
+      max-width: 650px;
+      margin: 0 auto; }
+      .main-content .main-content-wrapper .about-author-section article h2 {
+        text-align: center; }
+      .main-content .main-content-wrapper .about-author-section article p {
+        text-align: justify;
+        width: 100%;
+        font-size: 17px; }
+      .main-content .main-content-wrapper .about-author-section article p:last-child {
+        margin-top: 10px;
+        text-align: right; }
+    .main-content .main-content-wrapper .about-game-section article {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-between;
+      max-width: 650px;
+      margin: 0 auto; }
+      .main-content .main-content-wrapper .about-game-section article h2 {
+        width: 100%;
+        text-align: center; }
+      .main-content .main-content-wrapper .about-game-section article p {
+        text-align: center; }
+      .main-content .main-content-wrapper .about-game-section article .img-wrapper {
+        width: 200px;
+        padding: 7px;
+        margin-bottom: 5px;
+        border: solid 2px white;
+        border-radius: 5px;
+        background-color: #456c8d; }
+        .main-content .main-content-wrapper .about-game-section article .img-wrapper .screenshot {
+          max-width: 100%;
+          border: solid 2px white;
+          height: auto;
+          margin-bottom: 3px; }
+        .main-content .main-content-wrapper .about-game-section article .img-wrapper .description {
+          color: white;
+          text-align: center;
+          font-size: 17px;
+          max-height: 90px; }
+
+.main-footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  grid-area: footer;
+  background: orange;
+  color: white; }
+  .main-footer .copyright {
+    align-self: center;
+    display: inline-block;
+    font: 300 20px/20px "Lalezar", Helvetica, sans-serif; }
 * {
   padding: 0;
   margin: 0; }
-
-body {
-  background: #c4d4e6; }
 
 .description {
   margin: 0 auto; }
